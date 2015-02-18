@@ -1,0 +1,27 @@
+{
+  "name": "composanator",
+  "version": "1.0.0",
+  "description": "Small library for composing functions together.",
+  "main": "composanator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gwash3189/composanator.git"
+  },
+  "keywords": [
+    "functional",
+    "programming",
+    "function",
+    "composition",
+    "composition",
+    "functional"
+  ],
+  "author": "Adam Beck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gwash3189/composanator/issues"
+  },
+  "homepage": "https://github.com/Gwash3189/composanator"
+}
