@@ -2,26 +2,29 @@
   "name": "composanator",
   "version": "1.0.0",
   "description": "Small library for composing functions together.",
-  "main": "composanator.js",
+  "main": "composanator.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "testem ci -l chrome",
+    "build": "uglifyjs composanator.js --comporess --mangle -o composanator.min.js && exit 0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Gwash3189/composanator.git"
   },
   "keywords": [
-    "functional",
-    "programming",
+    "functional programming",
     "function",
     "composition",
-    "composition",
-    "functional"
+    "functional",
+    "micro"
   ],
   "author": "Adam Beck",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Gwash3189/composanator/issues"
   },
-  "homepage": "https://github.com/Gwash3189/composanator"
+  "homepage": "https://github.com/Gwash3189/composanator",
+  "devDependencies": {
+    "uglify-js": "^2.4.16"
+  }
 }
