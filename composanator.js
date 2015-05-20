@@ -2,9 +2,9 @@ var namespace = this.window === undefined ?
     (this.module !== undefined && this.module.exports !== undefined ? 
         module.exports : 
         undefined) :
-    (window.compose = {});
+    window;
 
-namespace = (function(){
+namespace.compose = (function(){
     "use strict";
   
     var directionEnum ={
