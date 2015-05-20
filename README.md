@@ -4,20 +4,26 @@ A small library to compose functions togeather.
 
 ###Use
 
-Functions are composed in a right to left order.
+Functions can be composed from either the left, or right. 
 
 ####CommonJS / Webpack / Browserify
 
+#####Right to left Composition
 ```
 var compose = require("componanator").compose;
 //...
-var newFunc = compose(lastFunc,firstFunc);
+var newFunc = compose.right(lastFunc,firstFunc);
 ```
-
+#####Left to right Composition
+```
+var compose = require("componanator").compose;
+//...
+var newFunc = compose.left(firstFunc, lastFunc);
+```
 ###Window
 
 ```
 var compose = window.compose
 //...
-var newFunc = compose(lastFunc,firstFunc);
+// same as above
 ```
