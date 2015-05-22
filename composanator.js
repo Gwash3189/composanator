@@ -1,5 +1,5 @@
 var namespace = this.window === undefined ?
-    (module !== undefined && module.exports !== undefined ? 
+    (module !== undefined && module.exports !== undefined ?
         module.exports :
         undefined) :
     window;
@@ -14,9 +14,9 @@ namespace.compose = (function(){
 
     var forEach = function(direction, arr, func){
       if(direction === directionEnum.left){
-        return reverseForEach(arr, func);
+        return normalForEach(arr, func);
       } else if(direction === directionEnum.right) {
-        normalForEach(arr, func);
+        return reverseForEach(arr, func);
       }
     };
 
