@@ -1,17 +1,17 @@
 var namespace = this.window === undefined ?
-    (this.module !== undefined && this.module.exports !== undefined ? 
-        module.exports : 
+    (module !== undefined && module.exports !== undefined ? 
+        module.exports :
         undefined) :
     window;
 
 namespace.compose = (function(){
     "use strict";
-  
+
     var directionEnum ={
       "left": "left",
       "right": "right"
     };
-  
+
     var forEach = function(direction, arr, func){
       if(direction === directionEnum.left){
         return reverseForEach(arr, func);
@@ -19,18 +19,18 @@ namespace.compose = (function(){
         normalForEach(arr, func);
       }
     };
-  
+
     var normalForEach = function(arr, fun){
       arr.forEach(fun);
     };
-  
+
     var reverseForEach = function(arr, fun) {
         var i = arr.length - 1;
         for (i; i > -1; --i) {
             fun(arr[i], i, arr);
         }
     };
-  
+
     var compose = function(direction) {
         return function() {
           var funcs = Object.keys(arguments);
@@ -49,9 +49,9 @@ namespace.compose = (function(){
               return value;
           };
         };
-        
+
     };
- 
+
     var api = {
       right: function(){
         return compose(directionEnum.right).apply(null, arguments);
