@@ -1,12 +1,12 @@
 {
   "name": "composanator",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Small library for composing functions together.",
   "main": "composanator.min.js",
   "scripts": {
     "test": "testem ci -l chrome",
     "build": "uglifyjs composanator.js --comporess --mangle -o composanator.min.js && exit 0",
-    "pub" : " npm run build && npm version patch && npm publish ."
+    "pub": " npm run build && npm version patch && npm publish ."
   },
   "repository": {
     "type": "git",
