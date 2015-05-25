@@ -7,7 +7,7 @@ try {
     namespace = (window.composanator = {});
 }
 
-namespace.compose = (function(){
+namespace = (function(){
     "use strict";
 
     var directionEnum ={
