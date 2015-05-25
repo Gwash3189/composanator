@@ -5,7 +5,8 @@
   "main": "composanator.min.js",
   "scripts": {
     "test": "testem ci -l chrome",
-    "build": "uglifyjs composanator.js --comporess --mangle -o composanator.min.js && exit 0"
+    "build": "uglifyjs composanator.js --comporess --mangle -o composanator.min.js && exit 0",
+    "pub" : " npm run build && npm version patch && npm publish ."
   },
   "repository": {
     "type": "git",
