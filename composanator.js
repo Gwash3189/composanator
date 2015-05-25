@@ -1,8 +1,11 @@
-var namespace = this.window === undefined ?
-    (module !== undefined && module.exports !== undefined ?
-        module.exports :
-        undefined) :
-    window;
+var namespace;
+try {
+    if(module && module.exports){
+        namespace = module.exports;
+    }
+} catch(e) {
+    namespace = (window.composanator = {});
+}
 
 namespace.compose = (function(){
     "use strict";
