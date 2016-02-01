@@ -2,11 +2,12 @@
   "name": "composanator",
   "version": "3.0.1",
   "description": "Small library for composing functions together.",
-  "main": "composanator.min.js",
+  "main": "dist/composanator.js",
   "scripts": {
-    "test": "testem ci -l chrome",
-    "build": "uglifyjs composanator.js --comporess --mangle -o composanator.min.js && exit 0",
-    "pub": " npm run build && npm version patch && npm publish ."
+    "build": "babel --out-dir dist/ src/",
+    "build:watch": "babel --watch --out-dir dist/ src/",
+    "test": "./node_modules/.bin/mocha 'test/**/*.js' --compilers js:babel-register",
+    "test:watch": "./node_modules/.bin/mocha 'test/**/*.js' --compilers js:babel-register --watch"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,15 @@
   },
   "homepage": "https://github.com/Gwash3189/composanator",
   "devDependencies": {
-    "uglify-js": "^2.4.16"
+    "babel": "^6.3.13",
+    "babel-cli": "^6.3.17",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "chai": "~3.3.0",
+    "eslint": "^1.10.3",
+    "eslint-plugin-mocha": "^1.1.0",
+    "mocha": "~2.3.3",
+    "sinon": "^1.17.2"
   }
 }
