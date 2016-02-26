@@ -4,8 +4,8 @@ const compose = function(direction) {
   const composeFactory = (implementation) => (...funcs) => (...args) => implementation(funcs, args);
 
   return direction === 'left'
-    ? composeFactory((funcs, args) => funcs.reverse().reduce(execute, args))
-    : composeFactory((funcs, args) => funcs.reduce(execute, args));
+    ? composeFactory((funcs, args) => funcs.reduce(execute, args))
+    : composeFactory((funcs, args) => funcs.reverse().reduce(execute, args));
 };
 
 export const right = compose('right');
