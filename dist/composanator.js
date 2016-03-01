@@ -28,9 +28,9 @@ var compose = function compose(direction) {
   };
 
   return direction === 'left' ? composeFactory(function (funcs, args) {
-    return funcs.reverse().reduce(execute, args);
-  }) : composeFactory(function (funcs, args) {
     return funcs.reduce(execute, args);
+  }) : composeFactory(function (funcs, args) {
+    return funcs.reverse().reduce(execute, args);
   });
 };
 
