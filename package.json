@@ -1,6 +1,6 @@
 {
   "name": "composanator",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Small library for composing functions together.",
   "main": "dist/composanator.js",
   "scripts": {
